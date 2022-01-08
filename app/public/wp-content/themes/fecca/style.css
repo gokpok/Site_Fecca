@@ -151,6 +151,7 @@ main{
     box-shadow: 13px 15px 11px 7px rgba(34, 60, 80, 0.2);
     z-index: 1;
     padding-top: 10px !important;
+    border-radius: 5px;
 }
 .dropdown2{
     padding-top: 0px !important;
@@ -342,6 +343,7 @@ main{
 }
 .google_btn{
     margin: 0;
+    margin-left: 17.63px;
     padding: 0;
 }
 .round{
@@ -1169,7 +1171,7 @@ main{
         position: absolute;
         background-color: #44A0FF;
         top: 0;
-        margin-top: 120px;
+        margin-top: 110px;
     }
 
     .btn_header:hover{
@@ -1349,7 +1351,36 @@ main{
         padding-left: 10px;
         line-height: calc(1vw + 4vh);
     }
-   /* .btn_header{
+    .text_1 {
+
+        font-size: 27px;
+        line-height: 33px;
+    }
+    .text_2 {
+        margin-top: 30px;
+    }
+    .accordion {
+        font-size: 16px;
+        line-height: 22px;
+        min-height: 40px;
+    }
+    .accordion {
+        padding-left: 7%;
+        padding-right: 22%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .title-sc3, .title-b {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .button_wrap img{
+
+        margin-top: 20px;
+
+    }
+   /* .btn_h
+   eader{
         margin: 0 !important;
         margin-top: 10px !important;
         width: 70%;
