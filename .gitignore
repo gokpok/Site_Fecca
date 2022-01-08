@@ -1,0 +1,5 @@
+
+app/*
+conf/*
+logs/*
+!app/public/wp-content/themes/fecca
