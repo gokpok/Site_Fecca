@@ -937,8 +937,9 @@ main{
     width:100%;
     max-width: 1440px;
     height: auto;
-    min-height: 1131px;
     padding: 0;
+    padding-bottom: 100px;
+    
 
 }
 .accordion {
