@@ -3,3 +3,4 @@ app/*
 conf/*
 logs/*
 !app/public/wp-content/themes/fecca
+!app/public/wp-content/plugins
