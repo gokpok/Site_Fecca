@@ -1,8 +1,9 @@
 /*
 Theme Name: Fecca
 Author: Dima
-Requires PHP Version: 5.6 or higher 
-
+Requires PHP Version: 5.6
+Requires at least: 5.6
+Description: Requires PHP: 5.6 or higher
 */
 
 *{
@@ -88,7 +89,7 @@ main{
     
     display:flex;
     justify-content: center;
-    
+    align-items: center;
     
    /* margin-top: 28px; */
     
@@ -115,9 +116,12 @@ main{
 }
 .menu li{
     position: relative;
-    margin-bottom: auto; 
+   /* margin-bottom: auto; 
     margin-top: auto; 
-    margin-right: 8.74%;
+    margin-right: 8.74%; */
+    min-height: fit-content;
+    min-width: fit-content; 
+    padding-right: 34px;
     
 }
 .menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before{
@@ -172,13 +176,12 @@ main{
     padding-top: 4px !important;
     margin: 0;
 }
-.open li:hover{
-    background-color: #a3d1ff;
-}
+
 .menu_nav{
     position: absolute;
-    right: -18px;
+    right: 12px;
     top: 6px;
+    z-index: -10;
 }
 
 
@@ -258,14 +261,7 @@ main{
     border-radius: 5px;
     text-align: center;
 }
-.btn_header:hover{
-    
-    background-color: #0079f1;
-    padding-top: 4px;
-    -webkit-box-shadow: 0px 10px 8px 0px rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 0px 10px 8px 0px rgba(34, 60, 80, 0.2);
-    box-shadow: 0px 10px 8px 0px rgba(34, 60, 80, 0.2);
-}
+
 
 .btn_header_menu{
     opacity: 1;
@@ -463,9 +459,7 @@ main{
     padding-left: 5px;
     vertical-align: -25%;
 }
-.text_2 a:hover:after{
-    padding-left: 25px !important;
-}
+
 .container_2-sc2{
     position: relative;
     display: flex;
@@ -532,9 +526,10 @@ main{
     width:100%;
     max-width: 1440px;
     height: auto;
-    min-height: 991px;
+    
     padding: 0;
     margin: 0;
+    padding-bottom: 250px;
 }
 .title-sc3, .title-b{
     display: block;
@@ -596,21 +591,14 @@ main{
     width: 313px;
     height: 48px; 
 }
-.advv:hover{
-    
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-    
-}
-.advv:hover .title_adv{
-    color: #44A0FF;
-}
+
+
 .screen_four{
     position: relative;
     width:100%;
     max-width: 1440px;
     height: auto;
-    min-height: 837px;
+    /*min-height: 837px;*/
     padding: 0;
 
 }
@@ -631,7 +619,7 @@ main{
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
-
+    text-transform: uppercase;
     
     letter-spacing: 1px;
     color: #14171D;
@@ -684,12 +672,12 @@ main{
 .card_back{
     position: absolute;
     top: 0;
-    height: 100%;
+    /*height: 100%;*/
     backface-visibility: hidden;
     transform: rotateY(180deg);
     background-color: #FFFFFF;
     padding: 32px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+   /* box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05); */
 }
 .card{
     display: block;
@@ -819,8 +807,9 @@ main{
     margin-left: 32px;
     color: #FFFFFF;
 }
+
 .card_back .author{
-    margin-top: 85px;
+    margin-top: 87px;
     
     color: #14171D;
 }
@@ -989,9 +978,7 @@ main{
     top: 0;
 }
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
-   /* background-color: #ccc;*/
-}
+
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
@@ -1091,6 +1078,7 @@ main{
         border: 2px solid #ffffff83;
         border-radius: 5px;
         background: #55aaff; 
+        padding-right: 0;
     }
     .menu a{
         font-size: 18px;
@@ -1118,9 +1106,13 @@ main{
         
         padding-top: 0px !important;
     }
-
+    .dropdown2{
+        width: 100% !important;
+    }
     .dropdown a{
         vertical-align: top;
+        max-width: fit-content;
+        margin: 0 auto;
     }
     .open li{
         margin-bottom: 3px !important;
@@ -1134,21 +1126,21 @@ main{
     }
     .open li{
         height: auto;
-        width: 100%;
-        padding-right: 10px;
+        width: 96%;
+        /*padding-right: 10px;*/
+        padding-left: 0;
         margin: 0;
             margin-bottom: 0px;
         display: flex;
         justify-content: center;
         flex-direction: column;
     }
-    .open li:hover{
-        background-color: #a3d1ff;
-    }
+
     .menu_nav{
         position: absolute;
         right: 10px;
         top: 17px;
+        z-index: 0;
     }
     .menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before{
         display: block;
@@ -1171,16 +1163,11 @@ main{
         display: block;
         position: absolute;
         background-color: #44A0FF;
-        top: 0;
-        margin-top: 110px;
+        
+        margin-top: calc((80/1056)*100vh);
     }
 
-    .btn_header:hover{
-    
 
-        padding-top: 9px;
-
-    }
     .btn_header{
         position: absolute;
         right: 3%;
@@ -1237,6 +1224,7 @@ main{
     }
     .screen_three{
         height: auto !important;
+        padding-bottom: 100px;
 
     }
     .advv, .text_advv{
@@ -1291,9 +1279,11 @@ main{
     /* ЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭКСПЕРИМЕНТЫ*/
     .card, .card_block, .card_back{      
         width: 100% !important;
-        height: auto !important;
         max-width: 361px !important;
         max-height: none !important;
+    }
+    .card{
+        height: auto;
     }
     .bg_dude img, .bg_bg img{
         width: 100% !important;
@@ -1333,15 +1323,50 @@ main{
     
 }
 
+@media(min-width: 767px){
+    .open li:hover{
+        background-color: #a3d1ff;
+    }
+    .btn_header:hover{
+    
+    
+        padding-top: 9px;
+    
+    }
+    .advv:hover .title_adv{
+        color: #44A0FF;
+    }
+    .advv:hover{
+        
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        
+    }
+
+    .text_2 a:hover:after{
+        padding-left: 25px !important;
+    }
+    .btn_header:hover{
+        
+        background-color: #0079f1;
+        padding-top: 4px;
+        -webkit-box-shadow: 0px 10px 8px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 10px 8px 0px rgba(34, 60, 80, 0.2);
+        box-shadow: 0px 10px 8px 0px rgba(34, 60, 80, 0.2);
+    }
+}
+
 @media(max-width: 767px){
+    body.lock{
+        overflow: hidden;
+    }
     .screen_one{
         padding-top: 20px;
     }
     .btn_header{
         /*margin-top: 20px !important;*/
+        min-width: 75px;
     }
-
-
     .store_btn a{
         margin: 0;
         margin-bottom: 10px;
@@ -1359,6 +1384,45 @@ main{
     }
     .text_2 {
         margin-top: 30px;
+    }
+    .card_back{
+        padding:0;
+    }
+    .bg_dude{
+        /*margin-top: 2.4%;*/
+        padding-top: 0;
+    }
+    .link_story{
+        margin: 0;
+    }
+    .card_back .quote{
+        margin: 0;
+        padding: 20px;
+        padding-top: 40px;
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .card_back .author{
+        margin: 0;
+        padding-top: 20px;
+        padding-left: 20px;
+        font-size: calc((0.75*24/500)*100vh);
+        line-height: calc((0.75*30/500)*100vh);
+    }
+    .card_back .position{
+        margin: 0;
+        padding-top: 7px;
+        padding-left: 20px;
+        font-size: calc((0.8*16/500)*100vh);
+        line-height: calc((0.8*24/500)*100vh);
+    }
+    .card_back .link_story{
+       
+        padding-left: 20px;
+    }
+    .card_block{
+        height: auto;
     }
     .accordion {
         font-size: 16px;
@@ -1402,6 +1466,7 @@ main{
     }
     .container_sc4{
         min-height: 0;
+        padding-bottom: 50px;
     }
     .btn_header{
         position: absolute;
@@ -1411,13 +1476,38 @@ main{
         width: 70px;
     }
 
-}
-@media (max-width: 324px){
+    .card_back .author {
+        margin: 0;
+        padding: 0px;
+        padding-left: 20px;
+    }
 
+    .card_back .quote{
+        margin: 0;
+        padding: 20px;
+        padding-top: 40px;
+        font-size: calc((1.2*24/500)*100vw);
+        line-height: calc((1.2*36/500)*100vw);
+    }
+ 
+
+}
+@media (max-width: 330px){
+    .store_btn{
+        flex-direction: column;
+        align-items: center;
+    }
     .apple_btn, .google_btn{
         margin: auto;
     }
     .card_bot{
-        bottom: 4px;
+       /* bottom: 4px; */
+    }
+}
+@media (max-height: 800px){
+    .header__nav.open-menu {
+
+        margin-top: 45px;
+
     }
 }
