@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Fecca</title>
+    <title><?php echo get_option('blogname'); // For Site Name ?></title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Red+Hat+Display:wght@400;500;600&display=swap" rel="stylesheet"> 
     <?php wp_head(); // Загрузка скриптов и стилей
     ?>
@@ -36,12 +36,13 @@
 
                 <?php 
                 $h_b = get_field('header_button'); // Получение обьекта поля group
+                $link_target = $h_b['target'] ? $h_b['target'] : '_self';
                 ?>
                 <div class="btn_header">
 
                     <a href="<?php  //Поле ссылки
                     echo esc_url($h_b['url']); 
-                    ?>" class="link_header" >
+                    ?>" class="link_header" target="<?php echo esc_attr( $link_target ); ?>">
                         <?php  //Поле текста
                         echo esc_html($h_b['title']);
                         ?>
